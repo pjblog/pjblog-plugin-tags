@@ -33,7 +33,7 @@ export default function Component() {
   return <ul>
     {
       data.map(res => {
-        return <li key={res.id}>{res.name}(${res.count})</li>
+        return <li key={res.id}>{res.name}({res.count})</li>
       })
     }
   </ul>
