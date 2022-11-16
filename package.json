@@ -17,7 +17,9 @@
   "dependencies": {},
   "keywords": [
     "pjblog",
-    "plugin"
+    "plugin",
+    "tag",
+    "cloud"
   ],
   "orm": {
     "type": "mysql",
