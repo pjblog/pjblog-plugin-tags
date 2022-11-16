@@ -25,6 +25,9 @@
     "database": ""
   },
   "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rm -rf ./dist && tsc -d",
     "watch": "tsc -d -w"
