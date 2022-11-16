@@ -1,0 +1,44 @@
+{
+  "name": "pjblog-plugin-tags",
+  "description": "标签云，提供PJBlog的文章使用最多的标签的集合，多用于博客侧边展示。提供后台变量控制来动态展示数据个数。",
+  "version": "0.0.0",
+  "private": true,
+  "cache": "file",
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379,
+    "password": "",
+    "db": 0
+  },
+  "port": 8866,
+  "cookie": [
+    "eiQFGTXedRuyPE2ap4Tiw3MhfPoFgZA8",
+    "LIsOG74pwL33C96mDvN3LU9Yu3Df6owi"
+  ],
+  "dependencies": {},
+  "orm": {
+    "type": "mysql",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "username": "",
+    "password": "",
+    "database": ""
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc -d",
+    "watch": "tsc -d -w"
+  },
+  "devDependencies": {
+    "@pjblog/core": "^1.0.0",
+    "@pjblog/control": "^1.0.0",
+    "pjblog-theme-default": "^1.0.0",
+    "mysql2": "^2.3.3",
+    "typescript": "^5.0.0-dev.20221103"
+  },
+  "pjblog": {
+    "type": "plugin",
+    "icon": "https://app-cdn.zblogcn.com/files/phpplugin/iddahe_com_schedule/logo.png-logo",
+    "extends": {}
+  }
+}
