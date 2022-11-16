@@ -2,7 +2,6 @@
   "name": "pjblog-plugin-tags",
   "description": "标签云，提供PJBlog的文章使用最多的标签的集合，多用于博客侧边展示。提供后台变量控制来动态展示数据个数。",
   "version": "1.0.0",
-  "private": true,
   "cache": "file",
   "redis": {
     "host": "127.0.0.1",
