@@ -1,15 +1,14 @@
 import { createPluginRouter } from '@pjblog/core';
-import { container, WidgetContext } from '@pjblog/core';
+import { container, ModularContext } from '@pjblog/core';
 const pkg = require('../package.json');
 export const pluginRouter = createPluginRouter(pkg.name);
-export const namespace = 'test';
 
 export interface TConfigs {
   tags: number
 }
 
 export function getConfigsByContainer() {
-  const context = container.get(namespace) as WidgetContext<TConfigs>;
+  const context = container.get(pkg.name) as ModularContext<TConfigs>
   if (!context) return {} as TConfigs;
-  return context.config_value;
+  return context.configs_value;
 }

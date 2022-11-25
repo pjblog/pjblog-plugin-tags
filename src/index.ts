@@ -1,9 +1,8 @@
 import { defineWidget } from '@pjblog/core';
 import { HttpBlogPluginTest } from './http';
-import { namespace, TConfigs } from './global';
+import { TConfigs } from './global';
 
 export default defineWidget<TConfigs>({
-  name: namespace,
   controllers: [HttpBlogPluginTest],
   configs: [
     {
