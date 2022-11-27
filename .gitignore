@@ -27,3 +27,4 @@ lerna-debug.log
 .index.md
 project
 cache
+package-lock.json
