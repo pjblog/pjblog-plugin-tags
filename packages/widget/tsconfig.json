@@ -1,0 +1,21 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "es2017",
+    "sourceMap": false,
+    "removeComments": true,
+    "isolatedModules": false,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "outDir": "../../dist/widget",
+    "module": "node16",
+		"moduleResolution": "node16",
+		"moduleDetection": "force"
+  },
+  "include": ["."]
+}

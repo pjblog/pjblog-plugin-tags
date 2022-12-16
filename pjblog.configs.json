@@ -1,0 +1,14 @@
+[
+  {
+    "type": "number",
+    "name": "hotTagSize",
+    "label": "热门标签个数",
+    "defaultValue": 10,
+    "number": {
+      "max": 100,
+      "min": 1,
+      "step": 1,
+      "unit": "个"
+    }
+  }
+]
