@@ -2,7 +2,7 @@ import { Logger } from '@pjblog/logger';
 import { Provider, Consumer, LifeError } from '@pjblog/manager';
 import { TypeORM } from '@pjblog/typeorm';
 import { Http } from '@pjblog/http';
-import { Plugin } from '@pjblog/core';
+import { Plugin, Article } from '@pjblog/core';
 import { TagController, HotTagController } from './controllers';
 import { IConfigs } from './utils';
 
@@ -11,6 +11,7 @@ export default class Tag extends Plugin<IConfigs> {
   @Consumer(Logger) private readonly Logger: Logger;
   @Consumer(TypeORM) private readonly TypeORM: TypeORM;
   @Consumer(Http) private readonly Http: Http;
+  @Consumer(Article) private readonly Article: Article;
 
   get logger() {
     return this.Logger.value;
@@ -22,6 +23,10 @@ export default class Tag extends Plugin<IConfigs> {
 
   get connection() {
     return this.TypeORM.value;
+  }
+
+  get article() {
+    return this.Article;
   }
 
   /**
