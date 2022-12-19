@@ -1,7 +1,7 @@
 {
   "name": "pjblog-plugin-tags",
   "description": "标签管理系统；侧边栏热门标签；标签管理；前台热门标签页面API。",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": "https://github.com/pjblog/pjblog-plugin-tags",
   "homepage": "https://npmjs.com/pjblog-plugin-tags",
   "cache": "file",
