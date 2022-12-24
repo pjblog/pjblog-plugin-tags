@@ -1,7 +1,7 @@
 {
   "name": "pjblog-plugin-tags",
   "description": "标签管理系统；侧边栏热门标签；标签管理；前台热门标签页面API。",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "repository": "https://github.com/pjblog/pjblog-plugin-tags",
   "homepage": "https://npmjs.com/pjblog-plugin-tags",
   "cache": "file",
@@ -44,7 +44,7 @@
   },
   "pjblog": {
     "type": "plugin",
-    "icon": "https://app-cdn.zblogcn.com/files/phpplugin/iddahe_com_schedule/logo.png-logo",
+    "icon": "https://cdn-icons-png.flaticon.com/128/3642/3642114.png",
     "extends": {}
   },
   "orm": {
