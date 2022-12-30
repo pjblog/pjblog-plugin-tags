@@ -3,11 +3,15 @@ import { Provider, Consumer, LifeError } from '@pjblog/manager';
 import { TypeORM } from '@pjblog/typeorm';
 import { Http } from '@pjblog/http';
 import { Plugin, Article } from '@pjblog/core';
-import { TagController, HotTagController } from './controllers';
+import { TagsController, HotTagsController } from './controllers';
 import { IConfigs } from './utils';
 
+export * from './controllers';
+export * from './service';
+export * from './utils';
+
 @Provider
-export default class Tag extends Plugin<IConfigs> {
+export default class TagsPlugin extends Plugin<IConfigs> {
   @Consumer(Logger) private readonly Logger: Logger;
   @Consumer(TypeORM) private readonly TypeORM: TypeORM;
   @Consumer(Http) private readonly Http: Http;
@@ -49,12 +53,12 @@ export default class Tag extends Plugin<IConfigs> {
    * @returns 
    */
   public async initialize(): Promise<void | (() => Promise<void>)> {
-    this.http.addController(this, TagController);
-    this.http.addController(this, HotTagController);
+    this.http.addController(TagsController);
+    this.http.addController(HotTagsController);
     this.logger.info('pjblog-plugin-tags Initialized.');
     return async () => {
-      this.http.delController(HotTagController);
-      this.http.delController(TagController);
+      this.http.delController(HotTagsController);
+      this.http.delController(TagsController);
       this.logger.info('pjblog-plugin-tags Terminated.');
     }
   }

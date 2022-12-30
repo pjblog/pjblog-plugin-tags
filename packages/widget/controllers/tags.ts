@@ -1,19 +1,20 @@
 import { Controller } from '../utils';
-import { Component, Water } from '@pjblog/http';
+import { Component, Water, Request } from '@pjblog/http';
+import { getNode } from '@pjblog/manager';
+import { TypeORM } from '@pjblog/typeorm';
 import { ITag, getTags } from '../service';
-import type Tag from '..';
+import type { EntityManager } from 'typeorm';
 
 @Controller('GET', '/tags')
-export class TagController extends Component<Tag, ITag[]> {
-  public response(): ITag[] {
-    return [];
+export class TagsController extends Component<ITag[]> {
+  public readonly manager: EntityManager;
+  constructor(req: Request) {
+    super(req, []);
+    this.manager = getNode(TypeORM).value.manager;
   }
 
   @Water()
-  public getags() {
-    return async (context: ITag[]) => {
-      const res = await getTags(this.container.connection.manager);
-      context.push(...res);
-    }
+  public async getags() {
+    this.res = await getTags(this.manager);
   }
 }
